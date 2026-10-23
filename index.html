@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bir-birimizga to‘g‘ri muomalada bo‘laylik</title>
+<style>
+:root{--navy:#132b4f;--blue:#2f6fed;--sky:#eaf3ff;--mint:#dff8ee;--ink:#1d2b3a;--muted:#64748b;--white:#fff;--gold:#ffd166}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#f7faff;line-height:1.6}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid #e4ecf6}
+.nav{max-width:1120px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:850;color:var(--navy);display:flex;align-items:center;gap:10px}.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:var(--blue);color:white;font-size:20px}
+nav{display:flex;gap:20px;align-items:center}nav a{font-size:14px;text-decoration:none;color:#40536b;font-weight:650}nav a:hover{color:var(--blue)}.menu{display:none;background:white;border:1px solid #dbe5f2;border-radius:10px;padding:8px 12px}
+.hero{overflow:hidden;position:relative;background:linear-gradient(130deg,#10274a 0%,#1e4b87 58%,#377be7 100%);color:white;padding:84px 22px 76px}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;border:1px solid #ffffff22}.hero:before{width:420px;height:420px;right:-80px;top:-150px}.hero:after{width:300px;height:300px;right:130px;bottom:-220px}
+.hero-inner{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#ffffff18;border:1px solid #ffffff35;border-radius:999px;padding:7px 13px;font-size:13px;letter-spacing:.04em}
+h1{font-size:clamp(38px,5.2vw,64px);line-height:1.07;letter-spacing:-.04em;margin:22px 0}.hero p{max-width:610px;color:#e2edff;font-size:18px;margin:0 0 28px}.actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:13px;font-weight:750;text-decoration:none;border:0;cursor:pointer;font-size:14px;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn-light{background:white;color:var(--navy)}.btn-ghost{border:1px solid #ffffff65;color:white;background:#ffffff0c}
+.hero-card{background:#ffffff13;border:1px solid #ffffff30;border-radius:28px;padding:26px;box-shadow:0 24px 60px #071a3540;transform:rotate(1deg)}
+.chat-top{display:flex;gap:12px;align-items:center;border-bottom:1px solid #ffffff30;padding-bottom:17px;margin-bottom:17px}.avatars{display:flex}.avatar{width:40px;height:40px;display:grid;place-items:center;border-radius:14px;background:#ffe5c2;font-size:22px;border:2px solid #284f86;margin-right:-7px}.chat-top strong{display:block}.chat-top small{color:#d8e6ff}.bubble{padding:13px 15px;border-radius:16px;margin:10px 0;font-size:14px;max-width:94%}.bubble.a{background:white;color:#24374d;border-bottom-left-radius:5px}.bubble.b{background:#c9f7e4;color:#164b3b;margin-left:auto;border-bottom-right-radius:5px}.tiny-note{color:#dbe9ff;font-size:12px;margin-top:15px}
+section{padding:76px 22px}.container{max-width:1120px;margin:auto}.section-head{max-width:720px;margin:0 auto 36px;text-align:center}.kicker{color:var(--blue);font-size:12px;font-weight:850;letter-spacing:.14em;text-transform:uppercase}.section-head h2{font-size:clamp(29px,4vw,42px);line-height:1.15;color:var(--navy);letter-spacing:-.03em;margin:10px 0 12px}.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid #e5edf7;border-radius:22px;padding:25px;box-shadow:0 10px 28px #18365a08}.card-icon{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;font-size:26px;background:var(--sky);margin-bottom:18px}.card:nth-child(2) .card-icon{background:#e1f8ee}.card:nth-child(3) .card-icon{background:#fff2d8}.card h3{color:var(--navy);margin:0 0 8px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}
+.band{background:#edf5ff}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.quote-panel{background:linear-gradient(145deg,#dbeaff,#f4f8ff);border-radius:28px;padding:35px;border:1px solid #d9e7fb}.quote-mark{font-size:54px;color:var(--blue);line-height:1}.quote-panel blockquote{font-size:25px;font-weight:800;color:var(--navy);line-height:1.3;margin:6px 0 16px}.quote-panel p{color:var(--muted);margin:0}.checklist{display:grid;gap:16px;margin-top:22px}.check{display:flex;gap:13px;align-items:flex-start}.check-icon{flex:none;background:#dff8ee;color:#137b59;width:31px;height:31px;border-radius:10px;display:grid;place-items:center;font-weight:900}.check strong{display:block;color:var(--navy);margin-bottom:2px}.check span{font-size:14px;color:var(--muted)}
+.scenario{background:white;border:1px solid #e2eaf5;border-radius:22px;padding:25px;margin-bottom:16px}.scenario .tag{font-size:11px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}.scenario h3{margin:8px 0;color:var(--navy)}.scenario p{margin:0;color:var(--muted)}.scenario .answer{margin-top:13px;background:#effaf5;padding:12px 14px;border-radius:12px;color:#22634b;font-size:14px}
+.quiz-wrap{max-width:760px;margin:auto;background:white;border:1px solid #e0e9f5;border-radius:26px;padding:clamp(22px,4vw,38px);box-shadow:0 20px 55px #15375d0b}.progress-row{display:flex;justify-content:space-between;color:var(--muted);font-size:13px;font-weight:700;margin-bottom:10px}.progress{height:7px;background:#eaf0f8;border-radius:99px;overflow:hidden;margin-bottom:25px}.progress span{display:block;height:100%;width:0;background:var(--blue);transition:width .25s}.quiz-wrap h3{font-size:23px;color:var(--navy);margin:0 0 18px}.options{display:grid;gap:10px}.option{width:100%;text-align:left;background:#fbfdff;border:1px solid #dce6f3;border-radius:14px;padding:14px 16px;font:inherit;color:var(--ink);cursor:pointer;transition:.15s}.option:hover{border-color:var(--blue);background:#f1f6ff}.option.correct{border-color:#28a879;background:#e8fbf3}.option.wrong{border-color:#e18a7e;background:#fff1ef}.feedback{min-height:26px;margin:13px 0;color:var(--muted);font-size:14px}.quiz-actions{display:flex;justify-content:space-between;align-items:center;gap:12px}.btn-primary{background:var(--blue);color:white}.btn-primary:disabled{opacity:.4;cursor:not-allowed;transform:none}.result{text-align:center;padding:16px 0}.result .score{font-size:52px;font-weight:900;color:var(--blue);line-height:1.1}
+.closing{background:var(--navy);color:white;text-align:center;padding:70px 22px}.closing h2{font-size:clamp(30px,4vw,46px);line-height:1.15;max-width:800px;margin:0 auto 18px;letter-spacing:-.03em}.closing p{max-width:650px;color:#d3e2f8;margin:0 auto 25px}.closing .btn{background:var(--gold);color:#25334a}
+footer{background:#0b1d35;color:#b9c9df;padding:22px;text-align:center;font-size:13px}footer strong{color:white}
+@media(max-width:800px){.hero-inner{grid-template-columns:1fr;gap:35px}.hero{padding-top:60px}.hero-card{max-width:520px}.cards{grid-template-columns:1fr 1fr}.two-col{grid-template-columns:1fr;gap:25px}nav{display:none;position:absolute;top:65px;left:12px;right:12px;background:white;border:1px solid #e1eaf5;border-radius:15px;padding:18px;box-shadow:0 15px 30px #18365a1a;flex-direction:column;align-items:flex-start}.nav.open nav{display:flex}.menu{display:block}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}.hero{padding:48px 18px 55px}section{padding:58px 18px}.nav{padding:12px 18px}.brand{font-size:14px}.hero p{font-size:16px}.hero-card{padding:20px}.quote-panel{padding:25px}.quote-panel blockquote{font-size:22px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav" id="nav">
+    <a class="brand" href="#bosh"><span class="brand-mark">♡</span> Muomala madaniyati</a>
+    <button class="menu" id="menuBtn" aria-label="Menyuni ochish">☰</button>
+    <nav>
+      <a href="#mohiyat">Mavzu haqida</a><a href="#qoidalar">Qoidalar</a><a href="#vaziyatlar">Hayotiy vaziyatlar</a><a href="#test">Test</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="bosh">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow">✦ TARBIYA VA HURMAT</span>
+        <h1>Bir-birimizga to‘g‘ri muomalada bo‘laylik</h1>
+        <p>Yaxshi muomala — insonlar orasidagi ishonch, do‘stlik va mehrni mustahkamlaydigan eng go‘zal fazilatlardan biridir.</p>
+        <div class="actions"><a class="btn btn-light" href="#mohiyat">Mavzuni o‘rganish <span>→</span></a><a class="btn btn-ghost" href="#test">O‘zimni sinayman ↗</a></div>
+      </div>
+      <div class="hero-card" aria-label="Yaxshi muomala haqida suhbat tasviri">
+        <div class="chat-top"><div class="avatars"><span class="avatar">🙂</span><span class="avatar" style="background:#c9f7e4">😊</span></div><div><strong>Samimiy suhbat</strong><small>Hurmat bilan tinglashdan boshlanadi</small></div></div>
+        <div class="bubble a">— Fikringizni aytishingiz mumkin. Men sizni tinglayapman.</div>
+        <div class="bubble b">— Rahmat! Bir-birimizni tushunishga harakat qilaylik.</div>
+        <div class="tiny-note">✦ Muloyim so‘z — qalblarga yo‘l topadi.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mohiyat">
+    <div class="container">
+      <div class="section-head"><div class="kicker">01 / MAVZU HAQIDA</div><h2>To‘g‘ri muomala nimadan boshlanadi?</h2><p>Muomala — faqat gapirish emas. U boshqalarni tinglashimiz, his-tuyg‘ulariga munosabatimiz va o‘z fikrimizni qanday ifodalashimizda namoyon bo‘ladi.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">🤝</div><h3>O‘zaro hurmat</h3><p>Har bir insonning fikri va sha’nini qadrlash, boshqalarni kamsitmaslik.</p></article>
+        <article class="card"><div class="card-icon">👂</div><h3>Diqqat bilan tinglash</h3><p>So‘zini bo‘lmaslik, tushunishga intilish va javob berishdan oldin o‘ylash.</p></article>
+        <article class="card"><div class="card-icon">💬</div><h3>Muloyim so‘zlash</h3><p>“Iltimos”, “rahmat”, “kechirasiz” kabi so‘zlardan o‘rinli foydalanish.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="qoidalar">
+    <div class="container two-col">
+      <div class="quote-panel"><div class="quote-mark">“</div><blockquote>O‘zingga ravo ko‘rgan hurmatni boshqalarga ham ravo ko‘r.</blockquote><p>Muomala madaniyatining muhim tamoyili — boshqalarga o‘zimiz istagan hurmat bilan munosabatda bo‘lish.</p></div>
+      <div><div class="kicker">02 / MUHIM QOIDALAR</div><h2 style="color:var(--navy);font-size:clamp(28px,3.5vw,38px);line-height:1.15;margin:10px 0">Har kuni amal qiladigan odatlar</h2>
+        <div class="checklist">
+          <div class="check"><div class="check-icon">✓</div><div><strong>Salomlashishni unutmang</strong><span>Samimiy salom suhbatni iliq boshlaydi.</span></div></div>
+          <div class="check"><div class="check-icon">✓</div><div><strong>Boshqalarni kamsitmang</strong><span>Hazil ham birovning ko‘nglini og‘ritmasligi kerak.</span></div></div>
+          <div class="check"><div class="check-icon">✓</div><div><strong>Kelishmovchilikni tinch hal qiling</strong><span>Ovozni ko‘tarmasdan, dalil va hurmat bilan gapiring.</span></div></div>
+          <div class="check"><div class="check-icon">✓</div><div><strong>Xato qilsangiz, uzr so‘rang</strong><span>Uzr so‘rash zaiflik emas, mas’uliyat belgisidir.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vaziyatlar">
+    <div class="container">
+      <div class="section-head"><div class="kicker">03 / HAYOTIY VAZIYATLAR</div><h2>Qanday yo‘l tutgan ma’qul?</h2><p>Kundalik hayotda uchraydigan vaziyatlarda to‘g‘ri muomala tanlovimizdan bilinadi.</p></div>
+      <div class="two-col">
+        <article class="scenario"><span class="tag">1-vaziyat · Sinfdoshlar</span><h3>Sinfdoshingiz fikringizga qo‘shilmadi.</h3><p>Darhol bahslashish yoki uni masxara qilish o‘rniga, fikrini tinglang va o‘z qarashingizni xotirjam tushuntiring.</p><div class="answer">✓ “Fikringizni tushundim. Men esa buni boshqacharoq ko‘raman.”</div></article>
+        <article class="scenario"><span class="tag">2-vaziyat · Xatoni tan olish</span><h3>Bilmasdan birovning ko‘nglini og‘ritdingiz.</h3><p>Bahona izlash o‘rniga, vaziyatni tan oling, samimiy uzr so‘rang va xatoni takrorlamaslikka harakat qiling.</p><div class="answer">✓ “Sizni ranjitganim uchun uzr. Bunday bo‘lishini istamagandim.”</div></article>
+        <article class="scenario"><span class="tag">3-vaziyat · Tinglash</span><h3>Do‘stingiz sizga muammosini aytyapti.</h3><p>Gapini bo‘lmang, ustidan kulmang va darhol hukm chiqarmang. Avval uni tushunishga harakat qiling.</p><div class="answer">✓ “Seni tinglayapman. Xohlasang, birgalikda yechim izlaymiz.”</div></article>
+        <article class="scenario"><span class="tag">4-vaziyat · Onlayn muloqot</span><h3>Internetda siz bilan kimdir qo‘pol gaplashdi.</h3><p>Haqorat bilan javob qaytarmang. Xotirjam qoling, zarur bo‘lsa suhbatni to‘xtating va ishonchli kattadan yordam so‘rang.</p><div class="answer">✓ “Keling, bir-birimizga hurmat bilan murojaat qilaylik.”</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="test">
+    <div class="container">
+      <div class="section-head"><div class="kicker">04 / BILIMINGIZNI SINANG</div><h2>Muomala odobi bo‘yicha mini-test</h2><p>Har bir savolga mos javobni tanlang va natijangizni bilib oling.</p></div>
+      <div class="quiz-wrap" id="quiz">
+        <div class="progress-row"><span id="questionCount">1-savol / 5</span><span id="scoreLive">Natija: 0</span></div><div class="progress"><span id="progressBar"></span></div>
+        <div id="quizContent"><h3 id="question">Suhbatdoshingiz gapirayotganda nima qilishingiz kerak?</h3><div class="options" id="options"></div><div class="feedback" id="feedback" aria-live="polite"></div><div class="quiz-actions"><span style="font-size:13px;color:var(--muted)">Shoshilmasdan o‘ylang.</span><button class="btn btn-primary" id="nextBtn" disabled>Keyingi →</button></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="closing"><h2>Yaxshi muomala — kichik odat, katta o‘zgarish.</h2><p>Bugun bir insonni diqqat bilan tinglang, samimiy rahmat ayting yoki kimningdir ko‘nglini ko‘taring. Hurmat o‘zimizdan boshlanadi.</p><a class="btn" href="#bosh">↑ Bosh sahifaga qaytish</a></section>
+</main>
+<footer><strong>Bir-birimizga to‘g‘ri muomalada bo‘laylik</strong><br>Hurmat bilan yashaylik, mehr bilan muomala qilaylik.<br><span style="display:inline-block;margin-top:10px;color:#ffffff;font-weight:700">Tayyorladi: Ravshanov A</span><br>© <span id="year"></span></footer>
+<script>
+const questions=[
+ {q:"Suhbatdoshingiz gapirayotganda nima qilishingiz kerak?",a:["Gapini bo‘lib, o‘z fikringizni aytish","Diqqat bilan tinglash","Telefonga qarash"],correct:1,why:"To‘g‘ri! Diqqat bilan tinglash hurmat va tushunishni ko‘rsatadi."},
+ {q:"Do‘stingizni bilmasdan ranjitib qo‘ysangiz, nima qilasiz?",a:["Hech narsa bo‘lmagandek yuraman","Uni ayblayman","Samimiy uzr so‘rayman"],correct:2,why:"To‘g‘ri! Xatoni tan olish va uzr so‘rash mas’uliyatli munosabatdir."},
+ {q:"Fikrlar turlicha bo‘lsa, qanday yo‘l tutish kerak?",a:["Xotirjam gaplashib, fikrlarni tinglash","Baland ovozda bahslashish","Suhbatdoshni masxara qilish"],correct:0,why:"To‘g‘ri! Kelishmovchilikni hurmat va muloqot orqali hal qilish mumkin."},
+ {q:"Qaysi ibora odobli muomalaga mos?",a:["“Jim bo‘l!”","“Iltimos, yordam bera olasizmi?”","“Bu sening ishing emas!”"],correct:1,why:"To‘g‘ri! Iltimos kabi muloyim iboralar samimiy muloqotga yordam beradi."},
+ {q:"Internetda kimdir qo‘pol yozsa, eng maqbul yo‘l qaysi?",a:["Haqorat bilan javob berish","Shaxsiy ma’lumotlarni yuborish","Xotirjam qolish va zarur bo‘lsa suhbatni to‘xtatish"],correct:2,why:"To‘g‘ri! Xotirjamlikni saqlang, shaxsiy ma’lumotlarni himoya qiling va zarur bo‘lsa yordam so‘rang."}
+];
+let index=0,score=0,answered=false;
+const qEl=document.getElementById('question'),opts=document.getElementById('options'),fb=document.getElementById('feedback'),next=document.getElementById('nextBtn');
+function render(){
+ answered=false;const item=questions[index];document.getElementById('questionCount').textContent=(index+1)+'-savol / '+questions.length;
+ document.getElementById('scoreLive').textContent='Natija: '+score;document.getElementById('progressBar').style.width=(index/questions.length*100)+'%';
+ qEl.textContent=item.q;opts.innerHTML='';fb.textContent='';next.disabled=true;next.textContent=index===questions.length-1?'Natijani ko‘rish':'Keyingi →';
+ item.a.forEach((answer,i)=>{const b=document.createElement('button');b.className='option';b.textContent=String.fromCharCode(65+i)+'. '+answer;b.addEventListener('click',()=>choose(i,b));opts.appendChild(b)});
+}
+function choose(i,button){if(answered)return;answered=true;const item=questions[index];const buttons=[...opts.querySelectorAll('button')];buttons.forEach(b=>b.disabled=true);if(i===item.correct){score++;button.classList.add('correct');fb.textContent=item.why}else{button.classList.add('wrong');buttons[item.correct].classList.add('correct');fb.textContent='To‘g‘ri javob: '+item.a[item.correct]+'.';}document.getElementById('scoreLive').textContent='Natija: '+score;next.disabled=false;}
+next.addEventListener('click',()=>{if(!answered)return;index++;if(index<questions.length){render();return;}document.getElementById('progressBar').style.width='100%';document.getElementById('questionCount').textContent='Test yakunlandi';document.getElementById('scoreLive').textContent='Natija: '+score;document.getElementById('quizContent').innerHTML='<div class="result"><div style="font-size:48px;margin-bottom:10px">'+(score>=4?'🏆':score>=3?'🌟':'📘')+'</div><div class="score">'+score+'/'+questions.length+'</div><h3 style="margin:12px 0">'+(score===5?'A’lo! Siz muomala qoidalarini yaxshi bilasiz.':score>=3?'Yaxshi natija! Yana bir bor takrorlab ko‘ring.':'Mashq qilishda davom eting!')+'</h3><p style="color:var(--muted);margin-bottom:22px">Eng muhimi — yaxshi muomala qoidalarini kundalik hayotda qo‘llash.</p><button class="btn btn-primary" id="restart">Qayta ishlash ↻</button></div>';document.getElementById('restart').addEventListener('click',()=>{index=0;score=0;document.getElementById('quizContent').innerHTML='<h3 id="question"></h3><div class="options" id="options"></div><div class="feedback" id="feedback" aria-live="polite"></div><div class="quiz-actions"><span style="font-size:13px;color:var(--muted)">Shoshilmasdan o‘ylang.</span><button class="btn btn-primary" id="nextBtn" disabled>Keyingi →</button></div>';location.hash='test';location.reload();});});
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('nav').classList.toggle('open'));
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();render();
+</script>
+</body>
+</html>
